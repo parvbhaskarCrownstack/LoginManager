@@ -12,11 +12,11 @@
  - Initialize the manager class and get the apple singin button to add on UI
     ```sh
     let appleLogin = AppleLoginManager(delegate: self, presentedWindow: self)
-     self.stackVew.addArrangedSubview(appleLogin.createAppleLoginButton())
+    self.stackVew.addArrangedSubview(appleLogin.createAppleLoginButton())
     ```
 - Also enable the delegate support by extending to AppleLoginDelegate protocol, and support for the incoming result function
     ```sh
-    > func didCompleteWithAuthorization(responseModel: AppleLoginManager.AppleLoginResponseModel) {
+    func didCompleteWithAuthorization(responseModel: AppleLoginManager.AppleLoginResponseModel) {
         print(responseModel)
     }
     ```
