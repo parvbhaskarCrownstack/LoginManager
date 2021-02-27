@@ -11,8 +11,8 @@ class ViewController: UIViewController {
     
     lazy var stackVew: UIStackView = {
         let sv = UIStackView()
-        sv.backgroundColor = .yellow
         sv.distribution = .fillEqually
+        sv.axis = .vertical
         sv.spacing = 20
         
         sv.translatesAutoresizingMaskIntoConstraints = false
@@ -38,6 +38,8 @@ class ViewController: UIViewController {
         stackVew.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         stackVew.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         stackVew.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8).isActive = true
+        
+        stackVew.arrangedSubviews[0].heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
 
     func setupAppleSignInButton() {
