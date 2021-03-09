@@ -67,7 +67,8 @@ class ViewController: UIViewController {
     }
 
     func setupAppleSignInButton() {
-        let appleLogin = AppleLoginManager(delegate: self, presentedWindow: self)
+        let appleLogin = AppleLoginManager(delegate: self)
+            
         self.stackVew.addArrangedSubview(appleLogin.createAppleLoginButton())
     }
     

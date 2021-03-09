@@ -25,9 +25,9 @@ class AppleLoginManager: NSObject {
     private var delegate: AppleLoginDelegate
     private var presentedWindow: UIViewController
     
-    init(delegate: AppleLoginDelegate, presentedWindow: UIViewController) {
+    init<D: AppleLoginDelegate & UIViewController>(delegate: D) {
         self.delegate = delegate
-        self.presentedWindow = presentedWindow
+        self.presentedWindow = delegate
     }
     
     func createAppleLoginButton() -> ASAuthorizationAppleIDButton {
